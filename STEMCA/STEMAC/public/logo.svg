@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="91 100 170 36" preserveAspectRatio="xMidYMid meet">
+  <g transform="translate(91.183,100.219) scale(1.1, 1)">
+    <g>
+      <!-- Blue component -->
+      <g transform="translate(0, 0)">
+        <svg width="36.824" height="35.406" viewBox="0 0 25.63 24.65">
+          <path d="M17.63 8.62a6.35 6.35 0 0 0-1.07.08V8h8V0H8.44a8.15 8.15 0 0 0-.58 16.3h.58a10.2 10.2 0 0 0 1.22-.1v.8H1.14v7.64h16.49a8 8 0 0 0 0-16z" fill="#20a1d2"/>
+          <path d="M16.57 8H8.44V0a8.14 8.14 0 0 1 8.13 8zm-6.91 9a8 8 0 0 0 8 7.64V17zm6.9-8.25a8 8 0 0 0-6.9 7.5 8.17 8.17 0 0 0 6.9-7.56z" fill="#fff" opacity=".3"/>
+        </svg>
+      </g>
+      <!-- Orange component -->
+      <g transform="translate(36.824, 0)">
+        <svg width="35.565" height="35.406" viewBox="0 0 24.63 24.52">
+          <path fill="#e76713" d="M24.63 0H0v16.35h6.15v8.17h12.32v-8.17h6.16V0z"/>
+          <path fill="#fff" opacity=".3" d="M6.15 0h12.32v16.35H6.15z"/>
+        </svg>
+      </g>
+      <!-- Yellow component -->
+      <g transform="translate(72.389, 0)">
+        <svg width="35.377" height="35.406" viewBox="0 0 24.63 24.65">
+          <path fill="#edbb4d" d="M24.63 7.96V0H0v24.63h6.16v.02h18.47v-7.81H12.31v-.54h12.32V8.49H12.31v-.53h12.32z"/>
+          <path d="M6.16 0h6.16v8H6.16zm0 8.49v7.81h6.16V8.49zm0 16.14h6.16v-7.79H6.16z" fill="#fff" opacity=".5"/>
+        </svg>
+      </g>
+      <!-- Green component -->
+      <g transform="translate(107.766, 0)">
+        <svg width="49.867" height="35.406" viewBox="0 0 34.69 24.63">
+          <path fill="#3eb372" d="M23.93 0H0v24.63h11.21V12.31h.89v12.32h10.92V12.31h.91v12.32h10.76V0H23.93z"/>
+          <path d="M11.21 12.32H0V0h11.21zm11.81 0V0H12.1v12.32zM23.93 0v12.32h10.76V0z" fill="#fff" opacity=".5"/>
+        </svg>
+      </g>
+    </g>
+  </g>
+</svg> 
