@@ -1,0 +1,195 @@
+/* Hero Component Styles */
+
+/* Flag animation wrapper */
+.flags-animation-wrapper {
+  width: 100%;
+  position: relative;
+  height: 180px; /* Increase height to accommodate country names */
+  margin-top: 2rem;
+  overflow: hidden;
+  padding-top: 20px; /* Reduce padding since we increased height */
+  padding-bottom: 40px; /* Add bottom padding for country names */
+  /* Use mask to fade edges on all sides */
+  -webkit-mask-image: 
+    linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 3%, black 97%, transparent 100%);
+  -webkit-mask-composite: intersect;
+  mask-image: 
+    linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 3%, black 97%, transparent 100%);
+  mask-composite: intersect;
+}
+
+.flags-track {
+  display: flex;
+  position: absolute;
+  white-space: nowrap;
+  animation: smoothCarousel 30s linear infinite;
+  width: max-content;
+}
+
+.flags-segment {
+  display: flex;
+}
+
+.flag-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 2rem;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.flag-item:hover {
+  transform: scale(1.1) translateY(-5px);
+}
+
+.flag-emoji-container {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.flag-emoji {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.4));
+  animation: gentleFloat 4s ease-in-out infinite;
+  animation-delay: calc(var(--index, 0) * 0.2s);
+  text-shadow: 
+    0 0 20px rgba(255,255,255,0.9),
+    0 0 40px rgba(255,255,255,0.6),
+    0 0 60px rgba(255,255,255,0.3);
+  transition: all 0.3s ease;
+}
+
+/* Enhanced glow on hover */
+.flag-item:hover .flag-emoji {
+  text-shadow: 
+    0 0 25px rgba(255,255,255,1),
+    0 0 50px rgba(255,255,255,0.8),
+    0 0 80px rgba(255,255,255,0.5);
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.5));
+}
+
+/* Country name styling */
+.country-name {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  padding: 4px 12px;
+  white-space: nowrap;
+}
+
+.flag-item:hover .country-name {
+  opacity: 1;
+  bottom: -30px;
+}
+
+/* Animations */
+@keyframes smoothCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(0) rotate(2deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+}
+
+/* Change hover behavior - pause only on individual flag hover */
+.flag-item:hover {
+  transform: scale(1.1) translateY(-5px);
+}
+
+/* Paused state for individual flag hover */
+.flags-track.paused {
+  animation-play-state: paused;
+}
+
+/* Remove the animation pause - we'll handle this differently */
+
+/* Remove the wrapper hover behavior */
+.flags-animation-wrapper::before,
+.flags-animation-wrapper::after {
+  display: none;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .flags-track {
+    animation-duration: 20s;
+  }
+  
+  .flag-item {
+    margin: 0 1.2rem;
+  }
+  
+  .flag-emoji {
+    font-size: 3.5rem !important;
+  }
+  
+  /* Adjust mask for mobile */
+  .flags-animation-wrapper {
+    height: 160px; /* Smaller height for mobile */
+    padding-top: 15px; /* Less top padding for mobile */
+    padding-bottom: 35px; /* Bottom padding for country names */
+    -webkit-mask-image: 
+      linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%),
+      linear-gradient(to bottom, transparent 0%, black 4%, black 96%, transparent 100%);
+    -webkit-mask-composite: intersect;
+    mask-image: 
+      linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%),
+      linear-gradient(to bottom, transparent 0%, black 4%, black 96%, transparent 100%);
+    mask-composite: intersect;
+  }
+}
+
+/* Add style indices for floating animation variation */
+.flag-item:nth-child(1) .flag-emoji { --index: 0; }
+.flag-item:nth-child(2) .flag-emoji { --index: 1; }
+.flag-item:nth-child(3) .flag-emoji { --index: 2; }
+.flag-item:nth-child(4) .flag-emoji { --index: 3; }
+.flag-item:nth-child(5) .flag-emoji { --index: 4; }
+.flag-item:nth-child(6) .flag-emoji { --index: 0; }
+.flag-item:nth-child(7) .flag-emoji { --index: 1; }
+.flag-item:nth-child(8) .flag-emoji { --index: 2; }
+.flag-item:nth-child(9) .flag-emoji { --index: 3; }
+.flag-item:nth-child(10) .flag-emoji { --index: 4; }
+.flag-item:nth-child(11) .flag-emoji { --index: 0; }
+.flag-item:nth-child(12) .flag-emoji { --index: 1; }
+.flag-item:nth-child(13) .flag-emoji { --index: 2; }
+.flag-item:nth-child(14) .flag-emoji { --index: 3; }
+.flag-item:nth-child(15) .flag-emoji { --index: 4; }
+.flag-item:nth-child(16) .flag-emoji { --index: 0; }
+.flag-item:nth-child(17) .flag-emoji { --index: 1; }
+.flag-item:nth-child(18) .flag-emoji { --index: 2; }
+.flag-item:nth-child(19) .flag-emoji { --index: 3; }
+.flag-item:nth-child(20) .flag-emoji { --index: 4; }
+
+/* Performance optimization - reduce animations on low-end devices */
+@media (prefers-reduced-motion: reduce) {
+  .flag-emoji {
+    animation: none !important;
+  }
+  
+  .flags-track {
+    animation-duration: 40s;
+  }
+} 

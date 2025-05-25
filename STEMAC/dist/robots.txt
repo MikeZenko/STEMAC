@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# High priority pages
+Allow: /tair-narynov
+Allow: /founder
+Allow: /about
+Allow: /mission
+
+# Sitemap location
+Sitemap: https://stemac-qp35nolzx-mikezenkos-projects.vercel.app/sitemap.xml 
