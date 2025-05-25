@@ -342,7 +342,7 @@ export default function Events() {
               Upcoming Events
             </h1>
             <p className="text-xl md:text-2xl max-w-4xl mx-auto text-white/90 drop-shadow-md leading-relaxed mb-8">
-              Join us for exciting STEM events across Central Asia. From workshops to bootcamps, 
+            Join us for exciting STEM events across Central Asia. From workshops to bootcamps, 
               we're building a community of future innovators and problem solvers.
             </p>
             
@@ -360,7 +360,7 @@ export default function Events() {
                 <span>5 Countries</span>
               </div>
             </div>
-          </div>
+        </div>
         </section>
 
         {/* Filters Section */}
@@ -380,14 +380,14 @@ export default function Events() {
                   <svg className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
-                  <Input
-                    type="search"
-                    placeholder="Search events..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+            <Input
+              type="search"
+              placeholder="Search events..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
                     className="pl-12 pr-4 py-3 text-lg border-2 border-gray-200 focus:border-[#20a1d2] rounded-xl shadow-lg w-full"
-                  />
-                </div>
+            />
+          </div>
               </div>
             </div>
             
@@ -395,7 +395,7 @@ export default function Events() {
             <div className="flex justify-center mb-12">
               <div className="flex gap-3 flex-wrap justify-center">
                 {eventTypes.map((type) => (
-                  <Button
+            <Button
                     key={type.key}
                     variant={selectedType === type.key ? "default" : "outline"}
                     onClick={() => setSelectedType(type.key)}
@@ -409,7 +409,7 @@ export default function Events() {
                     <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
                       {type.count}
                     </span>
-                  </Button>
+            </Button>
                 ))}
               </div>
             </div>
@@ -420,7 +420,7 @@ export default function Events() {
         <section className="pb-20 bg-gradient-to-b from-white to-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {filteredEvents.length > 0 ? (
-              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {filteredEvents.map((event, index) => (
                   <EventCard key={event.id} event={event} index={index} />
                 ))}
@@ -430,7 +430,7 @@ export default function Events() {
                 <div className="mx-auto w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mb-6">
                   <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
+                    </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-600 mb-2">No events found</h3>
                 <p className="text-gray-500 mb-6">Try adjusting your search or filters to find more events</p>
@@ -443,7 +443,7 @@ export default function Events() {
                 >
                   Clear Filters
                 </Button>
-              </div>
+        </div>
             )}
           </div>
         </section>

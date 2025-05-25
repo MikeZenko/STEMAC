@@ -222,48 +222,48 @@ export default function JoinUs() {
         </Helmet>
         
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white flex items-center justify-center py-12">
-          <div className="max-w-2xl mx-auto px-4">
+        <div className="max-w-2xl mx-auto px-4">
             <div className="bg-white rounded-2xl shadow-2xl p-12 text-center">
               <div className="mb-8">
                 <div className="mx-auto w-24 h-24 bg-gradient-to-br from-[#20a1d2]/10 to-[#3eb372]/10 rounded-full flex items-center justify-center mb-6">
                   <svg className="w-12 h-12 text-[#3eb372]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
+                </svg>
               </div>
+            </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Thank You for Your Interest!</h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                We appreciate you reaching out to STEM Central Asia. Our team will review your information and get back to you soon.
-              </p>
+              We appreciate you reaching out to STEM Central Asia. Our team will review your information and get back to you soon.
+            </p>
               
               <div className="space-y-6">
-                <p className="text-sm text-gray-500">
-                  While you wait, you might be interested in:
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
-                    to="/events"
+              <p className="text-sm text-gray-500">
+                While you wait, you might be interested in:
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/events"
                     className="inline-flex items-center justify-center px-8 py-4 border-2 border-[#20a1d2] text-[#20a1d2] rounded-xl hover:bg-[#20a1d2] hover:text-white transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:scale-105"
-                  >
+                >
                     <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
-                    View Upcoming Events
-                  </Link>
-                  <Link 
-                    to="/departments"
+                  View Upcoming Events
+                </Link>
+                <Link 
+                  to="/departments"
                     className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#20a1d2] to-[#3eb372] text-white rounded-xl hover:from-[#1b8ab3] hover:to-[#36a869] transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:scale-105"
-                  >
+                >
                     <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
-                    Explore Our Departments
-                  </Link>
-                </div>
+                  Explore Our Departments
+                </Link>
               </div>
             </div>
           </div>
         </div>
+      </div>
       </>
     )
   }
@@ -339,7 +339,7 @@ export default function JoinUs() {
               Join Our Mission
             </h1>
             <p className="text-xl md:text-2xl max-w-4xl mx-auto text-white/90 drop-shadow-md leading-relaxed mb-8">
-              Whether you're a student, educator, or industry professional, there are many ways 
+            Whether you're a student, educator, or industry professional, there are many ways 
               to get involved with STEM Central Asia and shape the future of education.
             </p>
             
@@ -357,7 +357,7 @@ export default function JoinUs() {
                 <span>Across Central Asia</span>
               </div>
             </div>
-          </div>
+        </div>
         </section>
 
         {/* Opportunities Section */}
@@ -377,14 +377,14 @@ export default function JoinUs() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                 Choose how you'd like to contribute to our mission of empowering youth through STEM education
               </p>
-            </div>
+                  </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {opportunities.map((opportunity, index) => (
                 <OpportunityCard key={opportunity.title} opportunity={opportunity} index={index} />
-              ))}
-            </div>
+            ))}
           </div>
+        </div>
         </section>
 
         {/* Contact Form */}
@@ -414,140 +414,140 @@ export default function JoinUs() {
               
               <CardContent className="p-8">
                 <form onSubmit={handleSubmit} className="space-y-8">
-                  {/* Personal Information */}
+                {/* Personal Information */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="firstName" className="text-gray-700 font-medium">First Name *</Label>
-                      <Input
-                        id="firstName"
-                        value={formData.firstName}
-                        onChange={(e) => setFormData(prev => ({ ...prev, firstName: e.target.value }))}
-                        placeholder="Enter your first name"
-                        required
-                        className="border-2 border-gray-200 focus:border-[#20a1d2] rounded-lg py-3 px-4 text-lg transition-colors duration-300"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="lastName" className="text-gray-700 font-medium">Last Name *</Label>
-                      <Input
-                        id="lastName"
-                        value={formData.lastName}
-                        onChange={(e) => setFormData(prev => ({ ...prev, lastName: e.target.value }))}
-                        placeholder="Enter your last name"
-                        required
-                        className="border-2 border-gray-200 focus:border-[#20a1d2] rounded-lg py-3 px-4 text-lg transition-colors duration-300"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="email" className="text-gray-700 font-medium">Email Address *</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                        placeholder="Enter your email"
-                        required
-                        className="border-2 border-gray-200 focus:border-[#20a1d2] rounded-lg py-3 px-4 text-lg transition-colors duration-300"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="phone" className="text-gray-700 font-medium">Phone Number</Label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                        placeholder="Enter your phone number"
-                        className="border-2 border-gray-200 focus:border-[#20a1d2] rounded-lg py-3 px-4 text-lg transition-colors duration-300"
-                      />
-                    </div>
-                  </div>
-
                   <div className="space-y-2">
-                    <Label htmlFor="role" className="text-gray-700 font-medium">I am a... *</Label>
-                    <Select 
-                      value={formData.role}
-                      onValueChange={(value) => setFormData(prev => ({ ...prev, role: value }))}
-                    >
-                      <SelectTrigger className="border-2 border-gray-200 focus:border-[#20a1d2] rounded-lg py-3 px-4 text-lg">
-                        <SelectValue placeholder="Select your role" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {roles.map((role) => (
-                          <SelectItem key={role.value} value={role.value}>
-                            {role.label}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                      <Label htmlFor="firstName" className="text-gray-700 font-medium">First Name *</Label>
+                    <Input
+                      id="firstName"
+                      value={formData.firstName}
+                      onChange={(e) => setFormData(prev => ({ ...prev, firstName: e.target.value }))}
+                      placeholder="Enter your first name"
+                      required
+                        className="border-2 border-gray-200 focus:border-[#20a1d2] rounded-lg py-3 px-4 text-lg transition-colors duration-300"
+                    />
                   </div>
+                  <div className="space-y-2">
+                      <Label htmlFor="lastName" className="text-gray-700 font-medium">Last Name *</Label>
+                    <Input
+                      id="lastName"
+                      value={formData.lastName}
+                      onChange={(e) => setFormData(prev => ({ ...prev, lastName: e.target.value }))}
+                      placeholder="Enter your last name"
+                      required
+                        className="border-2 border-gray-200 focus:border-[#20a1d2] rounded-lg py-3 px-4 text-lg transition-colors duration-300"
+                    />
+                  </div>
+                </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                      <Label htmlFor="email" className="text-gray-700 font-medium">Email Address *</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                      placeholder="Enter your email"
+                      required
+                        className="border-2 border-gray-200 focus:border-[#20a1d2] rounded-lg py-3 px-4 text-lg transition-colors duration-300"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                      <Label htmlFor="phone" className="text-gray-700 font-medium">Phone Number</Label>
+                    <Input
+                      id="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+                      placeholder="Enter your phone number"
+                        className="border-2 border-gray-200 focus:border-[#20a1d2] rounded-lg py-3 px-4 text-lg transition-colors duration-300"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                    <Label htmlFor="role" className="text-gray-700 font-medium">I am a... *</Label>
+                  <Select 
+                    value={formData.role}
+                    onValueChange={(value) => setFormData(prev => ({ ...prev, role: value }))}
+                  >
+                      <SelectTrigger className="border-2 border-gray-200 focus:border-[#20a1d2] rounded-lg py-3 px-4 text-lg">
+                      <SelectValue placeholder="Select your role" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {roles.map((role) => (
+                        <SelectItem key={role.value} value={role.value}>
+                          {role.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
 
                   <div className="space-y-4">
                     <Label className="text-gray-700 font-medium">I'm interested in... (select all that apply)</Label>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {interests.map((interest) => (
+                    {interests.map((interest) => (
                         <div key={interest.id} className="flex items-center space-x-3 p-3 rounded-lg border border-gray-200 hover:border-[#20a1d2] transition-colors duration-300">
-                          <Checkbox
-                            id={interest.id}
-                            checked={formData.interests.includes(interest.id)}
-                            onCheckedChange={(checked) => 
-                              handleInterestChange(checked as boolean, interest.id)
-                            }
-                          />
-                          <label
-                            htmlFor={interest.id}
+                        <Checkbox
+                          id={interest.id}
+                          checked={formData.interests.includes(interest.id)}
+                          onCheckedChange={(checked) => 
+                            handleInterestChange(checked as boolean, interest.id)
+                          }
+                        />
+                        <label
+                          htmlFor={interest.id}
                             className="text-gray-700 font-medium leading-none cursor-pointer"
-                          >
-                            {interest.label}
-                          </label>
-                        </div>
-                      ))}
-                    </div>
+                        >
+                          {interest.label}
+                        </label>
+                      </div>
+                    ))}
                   </div>
+                </div>
 
-                  <div className="space-y-2">
+                <div className="space-y-2">
                     <Label htmlFor="message" className="text-gray-700 font-medium">Message</Label>
-                    <Textarea
-                      id="message"
-                      value={formData.message}
-                      onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                      placeholder="Tell us more about your interest in STEM Central Asia..."
+                  <Textarea
+                    id="message"
+                    value={formData.message}
+                    onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+                    placeholder="Tell us more about your interest in STEM Central Asia..."
                       className="min-h-[120px] border-2 border-gray-200 focus:border-[#20a1d2] rounded-lg p-4 text-lg transition-colors duration-300"
-                    />
-                  </div>
+                  />
+                </div>
 
                   <div className="flex items-start space-x-3 p-4 rounded-lg bg-gray-50">
-                    <Checkbox
-                      id="subscribe"
-                      checked={formData.subscribe}
-                      onCheckedChange={(checked) => 
-                        setFormData(prev => ({ ...prev, subscribe: checked as boolean }))
-                      }
-                    />
-                    <label
-                      htmlFor="subscribe"
+                  <Checkbox
+                    id="subscribe"
+                    checked={formData.subscribe}
+                    onCheckedChange={(checked) => 
+                      setFormData(prev => ({ ...prev, subscribe: checked as boolean }))
+                    }
+                  />
+                  <label
+                    htmlFor="subscribe"
                       className="text-gray-600 leading-relaxed cursor-pointer"
-                    >
-                      Keep me updated about STEM Central Asia news, events, and opportunities
-                    </label>
-                  </div>
-
-                  <Button 
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-[#20a1d2] to-[#3eb372] hover:from-[#1b8ab3] hover:to-[#36a869] text-white font-bold py-4 px-8 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   >
+                      Keep me updated about STEM Central Asia news, events, and opportunities
+                  </label>
+                </div>
+
+                <Button 
+                  type="submit"
+                    className="w-full bg-gradient-to-r from-[#20a1d2] to-[#3eb372] hover:from-[#1b8ab3] hover:to-[#36a869] text-white font-bold py-4 px-8 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
                     Submit Application
                     <svg className="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                     </svg>
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
         </section>
       </div>
 

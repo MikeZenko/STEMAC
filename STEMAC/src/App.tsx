@@ -116,8 +116,8 @@ const HomePage = () => {
               Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#20a1d2] to-[#3eb372]">Focus Areas</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We're committed to three key pillars that drive our mission forward and create lasting impact across Central Asia.
-            </p>
+            We're committed to three key pillars that drive our mission forward and create lasting impact across Central Asia.
+          </p>
           </div>
 
           {/* Focus Cards */}
@@ -153,7 +153,7 @@ const HomePage = () => {
                       </div>
                     ))}
                   </div>
-                </div>
+              </div>
               </div>
             </div>
 
@@ -188,7 +188,7 @@ const HomePage = () => {
                       </div>
                     ))}
                   </div>
-                </div>
+              </div>
               </div>
             </div>
 
@@ -223,7 +223,7 @@ const HomePage = () => {
                       </div>
                     ))}
                   </div>
-                </div>
+              </div>
               </div>
             </div>
           </div>
@@ -336,8 +336,8 @@ const HomePage = () => {
               What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#20a1d2] to-[#3eb372]">Community</span> Says
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Hear from students and educators who have been part of our journey in transforming STEM education in Central Asia.
-            </p>
+            Hear from students and educators who have been part of our journey in transforming STEM education in Central Asia.
+          </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -373,17 +373,17 @@ const HomePage = () => {
                       style={{ backgroundColor: testimonial.color }}
                     >
                       {testimonial.avatar}
-                    </div>
-                    <div className="ml-4">
+                </div>
+                <div className="ml-4">
                       <h4 className="font-bold text-gray-900 text-lg">{testimonial.name}</h4>
                       <p className="text-gray-600">{testimonial.role}</p>
-                    </div>
-                  </div>
+                </div>
+              </div>
                   <div className="mb-4">
                     <svg className="w-8 h-8 text-gray-300" fill="currentColor" viewBox="0 0 32 32">
                       <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                     </svg>
-                  </div>
+            </div>
                   <p className="text-gray-700 leading-relaxed italic">"{testimonial.quote}"</p>
                 </div>
               </div>
@@ -523,3 +523,4 @@ function App() {
 
 export default App;
 /***** END App.tsx ******/
+

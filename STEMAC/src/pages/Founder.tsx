@@ -511,26 +511,26 @@ export default function Founder() {
                 <div className="flex flex-wrap gap-4 mt-8 animate-fade-in-up" style={{ animationDelay: '1s' }}>
                   <a 
                     href="https://www.linkedin.com/in/tair-narynov-0107572a0" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
+                  target="_blank" 
+                  rel="noopener noreferrer"
                     className="group inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 hover:rotate-1 font-medium shadow-lg hover:shadow-xl"
-                  >
+                >
                     <svg className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                    LinkedIn
-                  </a>
-                  <a 
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                  LinkedIn
+                </a>
+                <a 
                     href="mailto:narynovts@gmail.com" 
                     className="group inline-flex items-center px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 hover:-rotate-1 font-medium shadow-lg hover:shadow-xl"
-                  >
+                >
                     <svg className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    Email
-                  </a>
-                </div>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Email
+                </a>
               </div>
+            </div>
               
               <div className={`lg:w-2/5 transition-all duration-1000 delay-400 ${
                 introRef.isInView 
@@ -539,21 +539,21 @@ export default function Founder() {
               }`}>
                 <div className="relative">
                   <div className="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500 max-w-sm mx-auto">
-                    <img 
-                      src="/images/team/tair-narynov.jpg" 
-                      alt="Tair Narynov - Founder and Global Director of STEM Central Asia" 
-                      className="w-full h-auto"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.src = 'https://via.placeholder.com/400x400?text=Tair+Narynov';
-                      }}
-                    />
-                  </div>
-                </div>
+                <img 
+                  src="/images/team/tair-narynov.jpg" 
+                  alt="Tair Narynov - Founder and Global Director of STEM Central Asia" 
+                  className="w-full h-auto"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = 'https://via.placeholder.com/400x400?text=Tair+Narynov';
+                  }}
+                />
               </div>
             </div>
           </div>
-        </section>
+            </div>
+            </div>
+          </section>
 
         {/* Academic Interests and Achievements */}
         <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
@@ -572,9 +572,9 @@ export default function Founder() {
                   Academic <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#20a1d2] to-[#3eb372]">Interests</span>
                 </h2>
                 <div className="space-y-6">
-                  {academicInterests.map((interest, index) => (
-                    <div 
-                      key={interest.title}
+                {academicInterests.map((interest, index) => (
+                  <div 
+                    key={interest.title}
                       className={`group bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 ${
                         interestsRef.isInView 
                           ? 'opacity-100 translate-x-0' 
@@ -584,16 +584,16 @@ export default function Founder() {
                     >
                       <div className="flex items-center gap-4">
                         <div className="flex-shrink-0 p-3 bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300">
-                          {interest.icon}
-                        </div>
-                        <div>
+                      {interest.icon}
+                    </div>
+                    <div>
                           <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#20a1d2] transition-colors duration-300">{interest.title}</h3>
                           <p className="text-gray-600">{interest.description}</p>
                         </div>
                       </div>
                     </div>
                   ))}
-                </div>
+                  </div>
               </div>
 
               {/* Achievements */}
@@ -609,9 +609,9 @@ export default function Founder() {
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#20a1d2] to-[#3eb372]">Achievements</span>
                 </h2>
                 <div className="space-y-6">
-                  {achievements.map((achievement, index) => (
-                    <div 
-                      key={achievement.title}
+                {achievements.map((achievement, index) => (
+                  <div 
+                    key={achievement.title}
                       className={`group bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:-rotate-1 ${
                         achievementsRef.isInView 
                           ? 'opacity-100 translate-x-0' 
@@ -621,16 +621,16 @@ export default function Founder() {
                     >
                       <div className="flex items-center gap-4">
                         <div className="flex-shrink-0 p-3 bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-300">
-                          {achievement.icon}
-                        </div>
-                        <div>
+                      {achievement.icon}
+                    </div>
+                    <div>
                           <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#3eb372] transition-colors duration-300">{achievement.title}</h3>
                           <p className="text-gray-600">{achievement.description}</p>
                         </div>
                       </div>
                     </div>
                   ))}
-                </div>
+                  </div>
               </div>
             </div>
           </div>
@@ -701,9 +701,9 @@ export default function Founder() {
                   />
                 ))}
               </div>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
         {/* Call to Action Section */}
         <section className="relative py-12 bg-gradient-to-r from-[#20a1d2] via-[#3eb372] to-[#20a1d2] text-white overflow-hidden">
@@ -749,31 +749,31 @@ export default function Founder() {
               Connect with Tair
             </h2>
             <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-white/90 drop-shadow-md leading-relaxed">
-              Interested in collaborating or learning more about STEM Central Asia's initiatives?
-            </p>
+                  Interested in collaborating or learning more about STEM Central Asia's initiatives? 
+                </p>
             
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <Link 
-                to="/join" 
+                  <Link 
+                    to="/join" 
                 className="group inline-flex items-center px-8 py-4 border-2 border-white text-lg font-semibold rounded-xl text-white hover:bg-white hover:text-[#20a1d2] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:rotate-1"
-              >
+                  >
                 <svg className="w-6 h-6 mr-3 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
-                Join Our Mission
-              </Link>
-              <a 
+                    Join Our Mission
+                  </Link>
+                  <a 
                 href="mailto:narynovts@gmail.com" 
                 className="group inline-flex items-center px-8 py-4 bg-white rounded-xl text-[#20a1d2] hover:bg-gray-50 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:-rotate-1"
-              >
+                  >
                 <svg className="w-6 h-6 mr-3 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                Contact Directly
-              </a>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    Contact Directly
+                  </a>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
       </div>
 
       {/* CSS animations */}
