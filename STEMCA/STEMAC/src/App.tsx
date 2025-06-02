@@ -45,7 +45,11 @@ const HomePage = () => {
           <div className="flex justify-center items-center space-x-8 mb-12 relative z-10">
             {countries.map((country) => (
               <div key={country.name} className="group relative">
-                <div className="w-24 h-16 md:w-32 md:h-20 overflow-hidden border-4 border-white shadow-lg transform transition-transform duration-300 group-hover:scale-110">
+                <div className="absolute inset-0 bg-white/30 backdrop-blur-sm rounded-full -mx-4 -my-8 scale-[1.5] transform transition-transform duration-300 group-hover:scale-[1.6]" style={{
+                  background: 'radial-gradient(circle at center, rgba(255,255,255,0.5) 10%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 80%)',
+                  filter: 'blur(3px)'
+                }}></div>
+                <div className="w-24 h-16 md:w-32 md:h-20 overflow-hidden border-4 border-white shadow-lg transform transition-transform duration-300 group-hover:scale-110 relative z-10">
                   <img
                     src={country.flag}
                     alt={`${country.name} flag`}

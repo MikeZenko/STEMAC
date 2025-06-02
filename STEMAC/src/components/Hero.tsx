@@ -14,6 +14,7 @@ const Hero = () => {
     { name: 'Kazakhstan', flag: '🇰🇿' },
     { name: 'Kyrgyzstan', flag: '🇰🇬' },
     { name: 'Tajikistan', flag: '🇹🇯' },
+    { name: 'Afghanistan', flag: '🇦🇫' },
     { name: 'Turkmenistan', flag: '🇹🇲' },
     { name: 'Uzbekistan', flag: '🇺🇿' }
   ];
@@ -40,7 +41,7 @@ const Hero = () => {
     <section className="relative">
       {/* Background overlay with pattern and parallax effect */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/30 animate-pulse-slow" />
         <div 
           ref={parallaxRef}
           className="w-full h-full transition-transform duration-200 ease-out"
@@ -49,10 +50,10 @@ const Hero = () => {
           <img 
             src="/images/homepage/IMG_9921.jpg" 
             alt="Students engaged in STEM activities" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover animate-scale-slow"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/20" />
       </div>
       
       {/* Main content container - adjusted padding for mobile */}
@@ -63,10 +64,16 @@ const Hero = () => {
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             } text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 md:mb-6 text-white drop-shadow-2xl [text-shadow:_2px_2px_8px_rgb(0_0_0_/_90%)]`}
           >
-            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">S</span>
-            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">T</span>
             <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">E</span>
-            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">M</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">m</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">p</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">o</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">w</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">e</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">r</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">i</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">n</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">g</span>
             <span className="inline-block mx-2"></span>
             <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">C</span>
             <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">e</span>
@@ -80,13 +87,23 @@ const Hero = () => {
             <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">s</span>
             <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">i</span>
             <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">a</span>
+            <span className="inline-block mx-2"></span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">t</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">h</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">r</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">o</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">u</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">g</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">h</span>
+            <span className="inline-block mx-2"></span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400">STEM</span>
           </h1>
           <p 
             className={`transition-all duration-1000 delay-300 ease-out transform ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             } text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto text-white drop-shadow-xl [text-shadow:_1px_1px_6px_rgb(0_0_0_/_80%)]`}
           >
-            Building a brighter future by connecting young minds with opportunities in Science, Technology, Engineering, and Mathematics.
+            Bridging the innovation gap in Central Asia by equipping the next generation with critical STEM skills for global challenges.
           </p>
         </div>
 
@@ -127,20 +144,29 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* CTA Button - Updated to match Upcoming Events button style */}
+        {/* CTA Buttons - Two options */}
         <div 
           className={`transition-all duration-1000 delay-1000 ease-out transform ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-          } flex justify-center mt-8`}
+          } flex flex-col sm:flex-row justify-center mt-8 gap-4`}
         >
           <Link 
             to="/join" 
-            className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 border-2 border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-[#20a1d2] transition-all duration-300 shadow-md"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 border-2 border-white bg-white text-base font-medium rounded-md text-[#20a1d2] hover:bg-blue-50 transition-all duration-300 shadow-md transform hover:-translate-y-1 hover:shadow-lg"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
             </svg>
             Join Our Mission
+          </Link>
+          <Link 
+            to="/events" 
+            className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 border-2 border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-[#20a1d2] transition-all duration-300 shadow-md transform hover:-translate-y-1 hover:shadow-lg"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            Upcoming Events
           </Link>
         </div>
       </div>

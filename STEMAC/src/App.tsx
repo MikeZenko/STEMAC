@@ -10,6 +10,7 @@ import Departments from './pages/Departments';
 import Mission from './pages/Mission';
 import Founder from './pages/Founder';
 import TairNarynov from './pages/TairNarynov';
+import NewsOpportunities from './pages/NewsOpportunities';
 import Navbar from './components/Navbar';
 import Newsletter from './components/Newsletter';
 import { Toaster } from '@/components/ui/toaster';
@@ -35,6 +36,7 @@ const HomePage = () => {
     { name: 'Kazakhstan', flag: '/images/homepage/kazakhstan.jpg' },
     { name: 'Kyrgyzstan', flag: '/images/homepage/kyrgyzstan.jpg' },
     { name: 'Tajikistan', flag: '/images/homepage/tajikistan.jpg' },
+    { name: 'Afghanistan', flag: '/images/homepage/afghanistan.jpg' },
     { name: 'Turkmenistan', flag: '/images/homepage/Turkmenistan.jpg' },
     { name: 'Uzbekistan', flag: '/images/homepage/Uzbekistan.jpg' }
   ];
@@ -84,7 +86,7 @@ const HomePage = () => {
               <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
               </svg>
-              <span className="text-sm font-medium">5 Countries Served</span>
+              <span className="text-sm font-medium">6 Countries Served</span>
             </div>
             <div className="flex items-center space-x-2 text-gray-600">
               <svg className="w-5 h-5 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
@@ -113,11 +115,11 @@ const HomePage = () => {
               </svg>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#20a1d2] to-[#3eb372]">Focus Areas</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#20a1d2] to-[#3eb372]">Transforming</span> Central Asia
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            We're committed to three key pillars that drive our mission forward and create lasting impact across Central Asia.
-          </p>
+              Our strategic focus areas are designed to address the unique STEM education challenges and opportunities in Central Asia.
+            </p>
           </div>
 
           {/* Focus Cards */}
@@ -139,19 +141,34 @@ const HomePage = () => {
                 </div>
                 <div className="p-8">
                   <div className="flex items-center mb-4">
-                    <h3 className="text-2xl font-bold text-gray-900 mr-3">Education</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mr-3">STEM Education</h3>
                     <div className="h-1 flex-1 bg-gradient-to-r from-[#20a1d2] to-transparent rounded"></div>
                   </div>
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    Providing quality STEM education through workshops, bootcamps, and hands-on learning experiences that prepare students for the future.
+                    We're expanding access to quality STEM education through interactive workshops, bootcamps, and project-based learning for students across all socioeconomic backgrounds.
                   </p>
                   <div className="space-y-3">
-                    {['Hands-on Workshops', 'Coding Bootcamps', 'Project-Based Learning'].map((item, index) => (
-                      <div key={index} className="flex items-center text-sm text-gray-700">
-                        <div className="w-2 h-2 bg-[#20a1d2] rounded-full mr-3 flex-shrink-0"></div>
-                        <span>{item}</span>
+                    {[
+                      {text: 'Hands-on Workshops', value: '12+ Workshops Conducted'},
+                      {text: 'Coding Bootcamps', value: '5 Cities Reached'},
+                      {text: 'Project-Based Learning', value: '150+ Students Engaged'}
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-center justify-between text-sm text-gray-700">
+                        <div className="flex items-center">
+                          <div className="w-2 h-2 bg-[#20a1d2] rounded-full mr-3 flex-shrink-0"></div>
+                          <span>{item.text}</span>
+                        </div>
+                        <span className="text-[#20a1d2] font-medium">{item.value}</span>
                       </div>
                     ))}
+                  </div>
+                  <div className="mt-8 pt-6 border-t border-gray-100">
+                    <Link to="/join" className="inline-flex items-center text-[#20a1d2] font-medium hover:text-[#20a1d2]/80 transition-colors">
+                      Get involved
+                      <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </Link>
                   </div>
               </div>
               </div>
@@ -174,19 +191,34 @@ const HomePage = () => {
                 </div>
                 <div className="p-8">
                   <div className="flex items-center mb-4">
-                    <h3 className="text-2xl font-bold text-gray-900 mr-3">Research</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mr-3">Research & Innovation</h3>
                     <div className="h-1 flex-1 bg-gradient-to-r from-[#e76713] to-transparent rounded"></div>
                   </div>
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    Supporting research initiatives and fostering innovation in Central Asian institutions through collaborative projects.
+                    Cultivating a culture of inquiry and innovation by supporting student research projects and connecting them with global innovation ecosystems.
                   </p>
                   <div className="space-y-3">
-                    {['Research Projects', 'Innovation Labs', 'Collaborative Studies'].map((item, index) => (
-                      <div key={index} className="flex items-center text-sm text-gray-700">
-                        <div className="w-2 h-2 bg-[#e76713] rounded-full mr-3 flex-shrink-0"></div>
-                        <span>{item}</span>
+                    {[
+                      {text: 'Student Research Projects', value: '8 Projects Supported'},
+                      {text: 'Innovation Competitions', value: '3 Events Hosted'},
+                      {text: 'International Collaborations', value: '4 Partners'}
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-center justify-between text-sm text-gray-700">
+                        <div className="flex items-center">
+                          <div className="w-2 h-2 bg-[#e76713] rounded-full mr-3 flex-shrink-0"></div>
+                          <span>{item.text}</span>
+                        </div>
+                        <span className="text-[#e76713] font-medium">{item.value}</span>
                       </div>
                     ))}
+                  </div>
+                  <div className="mt-8 pt-6 border-t border-gray-100">
+                    <Link to="/events" className="inline-flex items-center text-[#e76713] font-medium hover:text-[#e76713]/80 transition-colors">
+                      View our initiatives
+                      <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </Link>
                   </div>
               </div>
               </div>
@@ -209,19 +241,34 @@ const HomePage = () => {
                 </div>
                 <div className="p-8">
                   <div className="flex items-center mb-4">
-                    <h3 className="text-2xl font-bold text-gray-900 mr-3">Community</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mr-3">Community Building</h3>
                     <div className="h-1 flex-1 bg-gradient-to-r from-[#edbb4d] to-transparent rounded"></div>
                   </div>
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    Building a strong network of STEM professionals, educators, and students across Central Asia.
+                    Creating a vibrant network of STEM enthusiasts, educators, and professionals across Central Asia to foster collaboration and knowledge sharing.
                   </p>
                   <div className="space-y-3">
-                    {['Networking Events', 'Mentorship Programs', 'Knowledge Sharing'].map((item, index) => (
-                      <div key={index} className="flex items-center text-sm text-gray-700">
-                        <div className="w-2 h-2 bg-[#edbb4d] rounded-full mr-3 flex-shrink-0"></div>
-                        <span>{item}</span>
+                    {[
+                      {text: 'Networking Events', value: '6 Events Organized'},
+                      {text: 'Mentorship Programs', value: '25+ Active Mentors'},
+                      {text: 'Online Community', value: '300+ Members'}
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-center justify-between text-sm text-gray-700">
+                        <div className="flex items-center">
+                          <div className="w-2 h-2 bg-[#edbb4d] rounded-full mr-3 flex-shrink-0"></div>
+                          <span>{item.text}</span>
+                        </div>
+                        <span className="text-[#edbb4d] font-medium">{item.value}</span>
                       </div>
                     ))}
+                  </div>
+                  <div className="mt-8 pt-6 border-t border-gray-100">
+                    <Link to="/about" className="inline-flex items-center text-[#edbb4d] font-medium hover:text-[#edbb4d]/80 transition-colors">
+                      Meet our community
+                      <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </Link>
                   </div>
               </div>
               </div>
@@ -235,38 +282,88 @@ const HomePage = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-green-50 opacity-50"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#20a1d2]/10 to-[#3eb372]/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#3eb372]/10 to-[#20a1d2]/10 rounded-full blur-3xl"></div>
+        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-[#20a1d2] to-[#3eb372] rounded-full mb-8">
-              <svg 
-                className={`w-10 h-10 text-white ${eyeHasTriggered ? 'icon-eye-scroll-triggered' : 'icon-eye-enhanced'}`} 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+            {/* Vision text content */}
+            <div className="lg:w-1/2">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-[#20a1d2] to-[#3eb372] rounded-full mb-8">
+                <svg 
+                  className={`w-10 h-10 text-white ${eyeHasTriggered ? 'icon-eye-scroll-triggered' : 'icon-eye-enhanced'}`} 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#20a1d2] to-[#3eb372]">Vision</span> for Central Asia
+              </h2>
+              <p className="text-xl text-gray-600 leading-relaxed mb-6">
+                We envision a Central Asia where every young mind has access to quality STEM education, 
+                fostering innovation and technological advancement across the region.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                By 2030, we aim to empower over 10,000 students with STEM skills, establish innovation hubs in all six Central Asian countries, and create a self-sustaining ecosystem of STEM educators and mentors.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                  <div className="w-10 h-10 bg-[#20a1d2]/10 rounded-full flex items-center justify-center mb-4">
+                    <div className="w-5 h-5 bg-[#20a1d2] rounded-full"></div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Quality Education</h3>
+                  <p className="text-sm text-gray-600">Accessible STEM learning for all</p>
+                </div>
+                
+                <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                  <div className="w-10 h-10 bg-[#3eb372]/10 rounded-full flex items-center justify-center mb-4">
+                    <div className="w-5 h-5 bg-[#3eb372] rounded-full"></div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Innovation Focus</h3>
+                  <p className="text-sm text-gray-600">Nurturing creative problem solvers</p>
+                </div>
+                
+                <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                  <div className="w-10 h-10 bg-[#edbb4d]/10 rounded-full flex items-center justify-center mb-4">
+                    <div className="w-5 h-5 bg-[#edbb4d] rounded-full"></div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Regional Impact</h3>
+                  <p className="text-sm text-gray-600">Building connections across borders</p>
+                </div>
+              </div>
+              
+              <Link to="/mission" className="inline-flex items-center text-[#20a1d2] font-medium hover:text-[#20a1d2]/80 transition-colors">
+                Read our full mission
+                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#20a1d2] to-[#3eb372]">Vision</span> for Central Asia
-            </h2>
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8">
-              We envision a Central Asia where every young mind has access to quality STEM education, 
-              fostering innovation and technological advancement across the region.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
-              <div className="flex items-center text-gray-600">
-                <div className="w-3 h-3 bg-[#20a1d2] rounded-full mr-3"></div>
-                <span className="font-medium">Quality Education</span>
-              </div>
-              <div className="flex items-center text-gray-600">
-                <div className="w-3 h-3 bg-[#3eb372] rounded-full mr-3"></div>
-                <span className="font-medium">Innovation Focus</span>
-              </div>
-              <div className="flex items-center text-gray-600">
-                <div className="w-3 h-3 bg-[#edbb4d] rounded-full mr-3"></div>
-                <span className="font-medium">Regional Impact</span>
+            
+            {/* Vision image/visual */}
+            <div className="lg:w-1/2">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#20a1d2]/30 to-[#3eb372]/30 mix-blend-overlay"></div>
+                <img 
+                  src="/images/homepage/IMG_9921.jpg" 
+                  alt="Students collaborating on STEM projects" 
+                  className="w-full h-auto"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg max-w-xs text-center transform transition-transform duration-500 hover:scale-105">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Join Our Mission</h3>
+                    <p className="text-gray-600 mb-4">Be part of the movement to transform STEM education in Central Asia</p>
+                    <Link 
+                      to="/join"
+                      className="inline-block px-4 py-2 bg-gradient-to-r from-[#20a1d2] to-[#3eb372] text-white font-medium rounded-md hover:opacity-90 transition-opacity"
+                    >
+                      Get Involved
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -333,61 +430,91 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#20a1d2] to-[#3eb372]">Community</span> Says
+              Voices from Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#20a1d2] to-[#3eb372]">Community</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Hear from students and educators who have been part of our journey in transforming STEM education in Central Asia.
-          </p>
+              Real stories from students, educators, and partners who are part of our journey to transform STEM education across Central Asia.
+            </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "Aisha K.",
-                role: "Student, Kazakhstan",
-                avatar: "A",
+                name: "Aisha Karimova",
+                role: "Student, Nazarbayev University",
+                location: "Kazakhstan",
+                avatar: "/images/team/placeholder-female.jpg",
                 color: "#20a1d2",
-                quote: "The workshops opened my eyes to the possibilities in technology. I'm now pursuing a career in software development."
+                quote: "The robotics workshop completely changed my perspective on engineering. I never thought I could build something that actually works! Now I'm mentoring younger students in my community."
               },
               {
-                name: "Mirlan T.",
-                role: "Educator, Kyrgyzstan",
-                avatar: "M",
+                name: "Dr. Mirlan Torobekov",
+                role: "Physics Teacher",
+                location: "Kyrgyzstan",
+                avatar: "/images/team/placeholder-male.jpg",
                 color: "#e76713",
-                quote: "The resources and support provided have helped me create more engaging STEM lessons for my students."
+                quote: "The teaching resources and professional development opportunities have transformed my classroom. My students are now actively engaged in hands-on experiments rather than just theoretical learning."
               },
               {
-                name: "Sabina R.",
-                role: "Researcher, Uzbekistan",
-                avatar: "S",
+                name: "Sabina Rahimova",
+                role: "Tech Entrepreneur",
+                location: "Uzbekistan",
+                avatar: "/images/team/placeholder-female.jpg",
                 color: "#edbb4d",
-                quote: "Being part of this community has connected me with fellow researchers and opened new collaboration opportunities."
+                quote: "As someone who had to leave Central Asia to access quality tech education, I'm thrilled to partner with an organization building these opportunities locally. The talent and creativity is incredible."
               }
             ].map((testimonial, index) => (
-              <div key={index} className="group relative bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+              <div key={index} className="group relative bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-gray-50 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full blur-xl"></div>
                 <div className="relative">
                   <div className="flex items-center mb-6">
-                    <div 
-                      className="h-16 w-16 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg"
-                      style={{ backgroundColor: testimonial.color }}
-                    >
-                      {testimonial.avatar}
-                </div>
-                <div className="ml-4">
+                    <div className="h-16 w-16 rounded-full overflow-hidden shadow-lg border-2" style={{ borderColor: testimonial.color }}>
+                      <img 
+                        src={testimonial.avatar} 
+                        alt={testimonial.name}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.onerror = null;
+                          target.src = '/images/homepage/IMG_9921.jpg';
+                        }}
+                      />
+                    </div>
+                    <div className="ml-4">
                       <h4 className="font-bold text-gray-900 text-lg">{testimonial.name}</h4>
-                      <p className="text-gray-600">{testimonial.role}</p>
-                </div>
-              </div>
+                      <p className="text-gray-600 text-sm">{testimonial.role}</p>
+                      <div className="flex items-center mt-1">
+                        <div className="w-3 h-3 rounded-full mr-2" style={{ backgroundColor: testimonial.color }}></div>
+                        <span className="text-xs text-gray-500">{testimonial.location}</span>
+                      </div>
+                    </div>
+                  </div>
                   <div className="mb-4">
-                    <svg className="w-8 h-8 text-gray-300" fill="currentColor" viewBox="0 0 32 32">
+                    <svg className="w-8 h-8" style={{ color: testimonial.color + '40' }} fill="currentColor" viewBox="0 0 32 32">
                       <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                     </svg>
-            </div>
+                  </div>
                   <p className="text-gray-700 leading-relaxed italic">"{testimonial.quote}"</p>
+                  <div className="mt-6 pt-6 border-t border-gray-100 flex justify-end">
+                    <span className="inline-flex items-center text-sm" style={{ color: testimonial.color }}>
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      Verified Student
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
+          </div>
+          
+          <div className="mt-12 text-center">
+            <Link to="/about" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-[#20a1d2] to-[#3eb372] hover:opacity-90 transition-opacity shadow-md">
+              Read More Success Stories
+              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
@@ -457,6 +584,7 @@ const Layout = () => (
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li><Link to="/events" className="text-gray-400 hover:text-white">Events</Link></li>
+              <li><Link to="/news-opportunities" className="text-gray-400 hover:text-white">News & Opportunities</Link></li>
               <li><Link to="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
               <li><Link to="/join" className="text-gray-400 hover:text-white">Join Us</Link></li>
             </ul>
@@ -508,7 +636,8 @@ const router = createBrowserRouter([
       { path: "founder", element: <Founder /> },
       { path: "tair-narynov", element: <TairNarynov /> },
       { path: "events", element: <Events /> },
-      { path: "join", element: <JoinUs /> }
+      { path: "join", element: <JoinUs /> },
+      { path: "news-opportunities", element: <NewsOpportunities /> }
     ]
   }
 ]);

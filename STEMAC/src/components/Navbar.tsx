@@ -57,6 +57,7 @@ const Navbar = () => {
       ]
     },
     { name: 'Events', href: '/events' },
+    { name: 'News', href: '/news-opportunities' },
   ];
 
   // Helper function to check if current path is in the About section
