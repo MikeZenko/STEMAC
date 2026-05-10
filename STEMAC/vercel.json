@@ -1,9 +1,10 @@
 {
   "framework": "vite",
-  "buildCommand": "pnpm run build",
+  "installCommand": "npx --yes pnpm@9.15.4 install --frozen-lockfile",
+  "buildCommand": "npx --yes pnpm@9.15.4 run build",
   "outputDirectory": "dist",
   "routes": [
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
-} 
+}
