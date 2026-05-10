@@ -1,83 +1,40 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 export default function TairNarynov() {
-  // Track page view for SEO analytics
-  useEffect(() => {
-    // Create microdata for search engines
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'ProfilePage',
-      'mainEntity': {
-        '@type': 'Person',
-        'name': 'Tair Narynov',
-        'givenName': 'Tair',
-        'familyName': 'Narynov',
-        'jobTitle': 'Founder and Global Director of STEM Central Asia',
-        'description': 'Tair Narynov is a 4.0 GPA student, UCSD research intern, FIRST Robotics competitor, and founder of STEM Central Asia.',
-        'alumniOf': [
-          {
-            '@type': 'EducationalOrganization',
-            'name': 'High Bluff Academy',
-            'location': 'San Diego, California'
-          }
-        ],
-        'knowsAbout': ['STEM Education', 'Robotics', 'Biochemistry', 'Leadership'],
-        'memberOf': [
-          {
-            '@type': 'Organization',
-            'name': 'MarauderTech 9573 FIRST Robotics Team'
-          },
-          {
-            '@type': 'Organization',
-            'name': 'Model United Nations Club',
-            'roleName': 'President'
-          },
-          {
-            '@type': 'Organization',
-            'name': 'Associated Student Body (ASB)'
-          }
-        ],
-        'award': 'Bishops SWEN Knights Hackathon Winner (Lockheed Martin sponsored)',
-        'sameAs': ['https://linkedin.com/in/tairnarynov']
-      }
-    });
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
-
   return (
     <>
-      <Helmet prioritizeSeoTags>
-        <title>Tair Narynov - Founder, Student, Researcher, Leader | Official Profile</title>
-        <meta name="description" content="Official profile of Tair Narynov, founder of STEM Central Asia, 4.0 GPA student at High Bluff Academy, UCSD research intern, FIRST Robotics competitor, and Model UN President." />
-        <meta name="keywords" content="Tair Narynov, Tair, Narynov, STEM Central Asia founder, High Bluff Academy, UCSD research intern, FIRST Robotics, MarauderTech 9573, Model UN President, ASB, Aerospace Robotics" />
+      <Helmet>
+        <title>Tair Narynov | STEM Central Asia</title>
+        <meta name="description" content="Profile of Tair Narynov, founder of STEM Central Asia." />
         <link rel="canonical" href="https://stemac-qp35nolzx-mikezenkos-projects.vercel.app/tair-narynov" />
-        
-        {/* Additional meta tags for search engines */}
-        <meta property="article:author" content="Tair Narynov" />
-        <meta property="article:published_time" content="2024-07-03" />
-        <meta property="article:modified_time" content="2024-07-03" />
-        <meta property="article:section" content="Biography" />
-        <meta property="article:tag" content="Tair Narynov" />
-        <meta property="article:tag" content="STEM Central Asia" />
-        <meta property="article:tag" content="Founder" />
-        
-        {/* Open Graph tags specifically for Tair Narynov */}
-        <meta property="og:title" content="Tair Narynov - Founder, Student, Researcher, Leader | Official Profile" />
-        <meta property="og:description" content="Learn about Tair Narynov, the visionary founder of STEM Central Asia. 4.0 GPA student, UCSD research intern, robotics competitor, and passionate advocate for STEM education." />
+
+        <meta property="og:title" content="Tair Narynov | STEM Central Asia" />
+        <meta property="og:description" content="Profile of Tair Narynov, founder of STEM Central Asia." />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://stemac-qp35nolzx-mikezenkos-projects.vercel.app/tair-narynov" />
         <meta property="og:image" content="https://stemac-qp35nolzx-mikezenkos-projects.vercel.app/images/team/tair-narynov.jpg" />
-        <meta property="profile:first_name" content="Tair" />
-        <meta property="profile:last_name" content="Narynov" />
-        <meta property="profile:username" content="tairnarynov" />
+
+        <script type="application/ld+json">{`{
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          "mainEntity": {
+            "@type": "Person",
+            "name": "Tair Narynov",
+            "givenName": "Tair",
+            "familyName": "Narynov",
+            "jobTitle": "Founder of STEM Central Asia",
+            "url": "https://stemac-qp35nolzx-mikezenkos-projects.vercel.app/tair-narynov",
+            "image": "https://stemac-qp35nolzx-mikezenkos-projects.vercel.app/images/team/tair-narynov.jpg",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "STEM Central Asia",
+              "url": "https://stemac-qp35nolzx-mikezenkos-projects.vercel.app/"
+            },
+            "sameAs": ["https://linkedin.com/in/tairnarynov"]
+          }
+        }`}</script>
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-12 px-4 sm:px-6 lg:px-8">
@@ -222,20 +179,6 @@ export default function TairNarynov() {
             </Link>
           </section>
 
-          {/* Hidden SEO content with high keyword density */}
-          <div className="hidden">
-            <h2>Tair Narynov - Biography and Achievements</h2>
-            <p>This page contains information about Tair Narynov, the founder of STEM Central Asia.</p>
-            <p>Tair Narynov is a student at High Bluff Academy with a 4.0 GPA.</p>
-            <p>Tair Narynov works as a research intern at UCSD.</p>
-            <p>Tair Narynov participates in FIRST Robotics with team MarauderTech 9573.</p>
-            <p>Tair Narynov won the Bishops SWEN Knights Hackathon sponsored by Lockheed Martin.</p>
-            <p>Tair Narynov serves as President of the Model United Nations club.</p>
-            <p>Tair Narynov is active in the Associated Student Body (ASB).</p>
-            <p>Tair Narynov led a team in the Aerospace Robotics Coding Competition.</p>
-            <p>Contact Tair Narynov at tair@stemcentralasia.org.</p>
-            <p>Connect with Tair Narynov on LinkedIn at linkedin.com/in/tairnarynov.</p>
-          </div>
         </main>
       </div>
     </>

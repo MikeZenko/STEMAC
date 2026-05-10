@@ -403,10 +403,9 @@ export default function Founder() {
   return (
     <>
       <Helmet>
-        <title>Tair Narynov | Founder of STEM Central Asia</title>
-        <meta name="description" content="Learn about Tair Narynov, the founder of STEM Central Asia. 4.0 GPA student, UCSD research intern, robotics competitor, and passionate advocate for STEM education." />
-        <meta name="keywords" content="Tair Narynov, STEM Central Asia founder, High Bluff Academy, UCSD research intern, FIRST Robotics, MarauderTech 9573, Bishops SWEN Knights Hackathon" />
-        <link rel="canonical" href="https://stemac-qd0c6ygd7-mikezenkos-projects.vercel.app/founder" />
+        <title>Founder | STEM Central Asia</title>
+        <meta name="description" content="Meet the founder of STEM Central Asia and learn about the story behind the organization." />
+        <link rel="canonical" href="https://stemac-qp35nolzx-mikezenkos-projects.vercel.app/founder" />
       </Helmet>
 
       <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen overflow-hidden">
