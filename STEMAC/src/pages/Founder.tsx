@@ -10,10 +10,7 @@ export default function Founder() {
           name="description"
           content="A short note from the founder of STEM Central Asia."
         />
-        <link
-          rel="canonical"
-          href="https://stemac.vercel.app/founder"
-        />
+        <link rel="canonical" href="https://stemac.vercel.app/founder" />
       </Helmet>
 
       <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen">

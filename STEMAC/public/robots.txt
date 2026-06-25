@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://stemac-qp35nolzx-mikezenkos-projects.vercel.app/sitemap.xml
+Sitemap: https://stemac.vercel.app/sitemap.xml

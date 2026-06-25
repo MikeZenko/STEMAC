@@ -38,39 +38,65 @@ const Hero = () => {
   };
 
   return (
-    <section className="home-hero relative min-h-[85vh] lg:min-h-[90vh] overflow-hidden flex flex-col">
+    <section className="relative">
       {/* Background overlay with pattern and parallax effect */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/30 animate-pulse-slow" />
         <div 
           ref={parallaxRef}
-          className="absolute inset-0 transition-transform duration-200 ease-out"
-          style={{ transform: `translateY(${scrollY * 0.15}px)` }}
+          className="w-full h-full transition-transform duration-200 ease-out"
+          style={{ transform: `translateY(${scrollY * 0.2}px)` }}
         >
           <img 
             src="/images/homepage/IMG_9921.jpg" 
             alt="Students engaged in STEM activities" 
-            className="hero-bg-image w-full h-full object-cover object-[center_28%]"
+            className="w-full h-full object-cover animate-scale-slow"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/45 to-black/55" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/20" />
       </div>
       
       {/* Main content container - adjusted padding for mobile */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center max-w-7xl mx-auto px-5 pt-24 pb-16 md:px-6 md:pt-28 md:pb-20 lg:px-8 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 pt-20 pb-24 md:px-6 md:pt-28 md:pb-32 lg:px-8">
         <div className="text-center mb-10 md:mb-12">
           <h1 
             className={`transition-all duration-1000 ease-out transform ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             } text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 md:mb-6 text-white drop-shadow-2xl [text-shadow:_2px_2px_8px_rgb(0_0_0_/_90%)]`}
           >
-            Empowering Central Asia through{' '}
-            <span className="hero-stem whitespace-nowrap">
-              <span className="hero-stem-letter text-[#20a1d2]">S</span>
-              <span className="hero-stem-letter text-[#e76713]">T</span>
-              <span className="hero-stem-letter text-[#edbb4d]">E</span>
-              <span className="hero-stem-letter text-[#3eb372]">M</span>
-            </span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">E</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">m</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">p</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">o</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">w</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">e</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">r</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">i</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">n</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">g</span>
+            <span className="inline-block mx-2"></span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">C</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">e</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">n</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">t</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">r</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">a</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">l</span>
+            <span className="inline-block mx-2"></span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">A</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">s</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">i</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">a</span>
+            <span className="inline-block mx-2"></span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">t</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">h</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">r</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">o</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">u</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">g</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">h</span>
+            <span className="inline-block mx-2"></span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400">STEM</span>
           </h1>
           <p 
             className={`transition-all duration-1000 delay-300 ease-out transform ${

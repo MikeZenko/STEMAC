@@ -1,28 +1,5 @@
 /* Hero Component Styles */
 
-.hero-bg-image {
-  min-height: 85vh;
-  min-width: 100%;
-}
-
-@media (min-width: 1024px) {
-  .hero-bg-image {
-    min-height: 90vh;
-  }
-}
-
-.hero-stem {
-  display: inline-block;
-}
-
-.hero-stem-letter {
-  display: inline-block;
-  text-shadow:
-    0 0 12px rgba(255, 255, 255, 0.45),
-    0 2px 10px rgba(0, 0, 0, 0.85);
-  filter: brightness(1.15) saturate(1.2);
-}
-
 /* Flag animation wrapper */
 .flags-animation-wrapper {
   width: 100%;

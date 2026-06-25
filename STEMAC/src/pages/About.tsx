@@ -238,19 +238,6 @@ export default function About() {
                   <p className="text-[#3eb372] font-semibold mb-3">{member.role}</p>
                   <p className="text-gray-600 leading-relaxed line-clamp-3">{member.bio}</p>
                   
-                  {member.name === "Tair Narynov" && (
-                    <div className="mt-4 text-center" onClick={(e) => e.stopPropagation()}>
-                      <Link 
-                        to="/founder" 
-                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#20a1d2] to-[#3eb372] text-white rounded-lg hover:from-[#1b86b0] hover:to-[#359f61] transition-all duration-300 transform hover:scale-105 active:scale-95 font-medium"
-                      >
-                        View Founder's Page
-                        <svg className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </div>
-                  )}
                 </div>
               </div>
             ))}
