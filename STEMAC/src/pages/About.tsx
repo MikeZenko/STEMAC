@@ -237,7 +237,6 @@ export default function About() {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                   <p className="text-[#3eb372] font-semibold mb-3">{member.role}</p>
                   <p className="text-gray-600 leading-relaxed line-clamp-3">{member.bio}</p>
-                  
                 </div>
               </div>
             ))}

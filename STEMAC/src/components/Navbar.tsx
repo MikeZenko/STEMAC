@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
+const navigation = [
+  { name: 'Mission', href: '/mission' },
+  { name: 'Departments', href: '/departments' },
+  { name: 'About', href: '/about' },
+  { name: 'Events', href: '/events' },
+  { name: 'News', href: '/news-opportunities' },
+];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -16,18 +24,8 @@ const Navbar = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const navigation = [
-    { name: 'Mission', href: '/mission' },
-    { name: 'Departments', href: '/departments' },
-    { name: 'About', href: '/about' },
-    { name: 'Events', href: '/events' },
-    { name: 'News', href: '/news-opportunities' },
-  ];
 
   return (
     <nav className={`bg-white shadow-lg sticky top-0 left-0 right-0 transition-all duration-300 z-50 ${scrolled ? 'py-2' : 'py-4'}`}>

@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# SEO profile pages (static HTML)
+Allow: /tair-narynov.html
+Allow: /tair-narynov-profile.html
+
+# Sitemap location
 Sitemap: https://stemac.vercel.app/sitemap.xml

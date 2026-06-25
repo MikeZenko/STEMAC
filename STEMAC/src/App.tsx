@@ -8,7 +8,6 @@ import JoinUs from './pages/JoinUs';
 import About from './pages/About';
 import Departments from './pages/Departments';
 import Mission from './pages/Mission';
-import Founder from './pages/Founder';
 import NewsOpportunities from './pages/NewsOpportunities';
 import Navbar from './components/Navbar';
 import Newsletter from './components/Newsletter';
@@ -632,7 +631,6 @@ const router = createBrowserRouter([
       { path: "mission", element: <Mission /> },
       { path: "departments", element: <Departments /> },
       { path: "about", element: <About /> },
-      { path: "founder", element: <Founder /> },
       { path: "events", element: <Events /> },
       { path: "join", element: <JoinUs /> },
       { path: "news-opportunities", element: <NewsOpportunities /> }
