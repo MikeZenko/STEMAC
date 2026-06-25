@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
@@ -13,7 +12,7 @@ export default function Founder() {
         />
         <link
           rel="canonical"
-          href="https://stemac-qp35nolzx-mikezenkos-projects.vercel.app/founder"
+          href="https://stemac.vercel.app/founder"
         />
       </Helmet>
 
