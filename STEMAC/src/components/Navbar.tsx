@@ -19,10 +19,7 @@ const Navbar = () => {
   }, [location]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -51,17 +48,11 @@ const Navbar = () => {
                   key={item.name}
                   to={item.href}
                   className={`px-3 py-2 text-sm font-medium transition-colors duration-200 relative group
-                    ${location.pathname === item.href 
-                      ? 'text-[#20a1d2]' 
-                      : 'text-gray-700 hover:text-[#20a1d2]'
-                    }`}
+                    ${location.pathname === item.href ? 'text-[#20a1d2]' : 'text-gray-700 hover:text-[#20a1d2]'}`}
                 >
                   {item.name}
                   <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#20a1d2] transform transition-transform duration-200
-                    ${location.pathname === item.href 
-                      ? 'scale-x-100' 
-                      : 'scale-x-0 group-hover:scale-x-100'
-                    }`} 
+                    ${location.pathname === item.href ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} 
                   />
                 </Link>
               ))}
@@ -106,10 +97,7 @@ const Navbar = () => {
               key={item.name}
               to={item.href}
               className={`block px-4 py-2 text-base font-medium transition-colors duration-200
-                ${location.pathname === item.href 
-                  ? 'text-[#20a1d2] bg-gray-50' 
-                  : 'text-gray-700 hover:text-[#20a1d2] hover:bg-gray-50'
-                }`}
+                ${location.pathname === item.href ? 'text-[#20a1d2] bg-gray-50' : 'text-gray-700 hover:text-[#20a1d2] hover:bg-gray-50'}`}
               onClick={() => setIsOpen(false)}
             >
               {item.name}

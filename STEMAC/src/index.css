@@ -269,17 +269,20 @@ input, select, textarea {
 
 /* Combined animation classes for enhanced effects */
 .icon-eye-enhanced {
-  animation: iconFloat 3s ease-in-out infinite;
+  animation: iconFloat 6s ease-in-out infinite;
   filter: drop-shadow(0 0 8px rgba(32, 161, 210, 0.6));
   transition: all 0.3s ease;
+  will-change: transform, filter;
 }
 
 .icon-eye-scroll-triggered {
-  animation: eyeScrollBlink 2s ease-in-out forwards, eyeAwaken 2s ease-in-out forwards, iconFloat 3s ease-in-out infinite;
+  animation: eyeScrollBlink 2s ease-in-out forwards, eyeAwaken 2s ease-in-out forwards, iconFloat 6s ease-in-out infinite;
+  will-change: transform, filter;
 }
 
 .icon-lightning-enhanced {
-  animation: lightningStrike 3s ease-in-out infinite, iconFloat 3s ease-in-out infinite;
+  animation: lightningStrike 5s ease-in-out infinite, iconFloat 6s ease-in-out infinite;
+  will-change: transform, filter;
 }
 
 .icon-envelope-enhanced {
@@ -310,7 +313,8 @@ input, select, textarea {
 }
 
 .animate-float {
-  animation: float 3s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
+  will-change: transform;
 }
 
 .animate-spin-slow {
@@ -506,15 +510,12 @@ input, select, textarea {
 
 /* Animation classes */
 .animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
+  animation: fadeInUp 0.8s ease-out forwards;
+  will-change: transform, opacity;
 }
 
 .animate-fade-in-scale {
   animation: fadeInScale 0.6s ease-out;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
 }
 
 .animate-pulse-glow {
@@ -611,6 +612,8 @@ input, select, textarea {
   background-image: radial-gradient(circle, #20a1d2 1px, transparent 1px);
   background-size: 30px 30px;
   opacity: 0.05;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .bg-pattern-grid {
@@ -618,6 +621,8 @@ input, select, textarea {
     linear-gradient(rgba(32, 161, 210, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(32, 161, 210, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* Loading states */

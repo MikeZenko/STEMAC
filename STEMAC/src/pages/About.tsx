@@ -134,6 +134,11 @@ const useInView = (threshold = 0.3) => {
 export default function About() {
   const [selectedDepartment, setSelectedDepartment] = useState("All");
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
   
   // Sort team members by seniority
   const sortedTeamMembers = [...teamMembers].sort((a, b) => a.seniority - b.seniority);
@@ -153,6 +158,7 @@ export default function About() {
             src="/images/team/team-hero.jpg" 
             alt="STEM Central Asia Team" 
             className="w-full h-full object-cover opacity-30"
+            style={{ transform: 'translateZ(0)', backfaceVisibility: 'hidden' }}
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.src = '/images/homepage/IMG_9921.jpg';
@@ -160,7 +166,7 @@ export default function About() {
           />
         </div>
         
-        <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-0 left-0 w-full h-full" style={{ willChange: 'transform', transform: 'translateZ(0)' }}>
           <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float"></div>
           <div className="absolute bottom-10 right-10 w-40 h-40 bg-white/10 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-white/5 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
@@ -173,10 +179,21 @@ export default function About() {
             </svg>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg animate-fade-in-up">
-            Our <span className="text-yellow-300">Team</span>
+          <h1 className={`transition-all duration-1000 ease-out transform ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          } text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg`}>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">O</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">u</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">r</span>
+            <span className="inline-block mx-2"></span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-yellow-300">T</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-yellow-300">e</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-yellow-300">a</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-yellow-300">m</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-10 max-w-4xl mx-auto text-white/90 drop-shadow-md leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+          <p className={`transition-all duration-1000 delay-300 ease-out transform ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          } text-xl md:text-2xl mb-10 max-w-4xl mx-auto text-white/90 drop-shadow-md leading-relaxed`}>
             Meet the dedicated individuals who drive STEM Central Asia's mission forward.
           </p>
         </div>

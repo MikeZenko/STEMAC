@@ -189,8 +189,11 @@ const FadeInWhenVisible: React.FC<FadeInWhenVisibleProps> = ({ children, delay =
 const Mission = () => {
   const [eyeHasTriggered, setEyeHasTriggered] = useState(false);
   const eyeRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    setIsVisible(true);
+    
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -226,11 +229,12 @@ const Mission = () => {
             src="/images/homepage/IMG_9921.jpg" 
             alt="STEM education in action" 
             className="w-full h-full object-cover object-[center_65%] opacity-30"
+            style={{ transform: 'translateZ(0)', backfaceVisibility: 'hidden' }}
           />
         </div>
         
         {/* Animated background elements */}
-        <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-0 left-0 w-full h-full" style={{ willChange: 'transform', transform: 'translateZ(0)' }}>
           <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float"></div>
           <div className="absolute bottom-10 right-10 w-40 h-40 bg-white/10 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-white/5 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
@@ -243,15 +247,44 @@ const Mission = () => {
             </svg>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg animate-fade-in-up">
-            Empowering Through <span className="text-yellow-300">STEM</span>
+          <h1 className={`transition-all duration-1000 ease-out transform ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          } text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg`}>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">E</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">m</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">p</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">o</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">w</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">e</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">r</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">i</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">n</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">g</span>
+            <span className="inline-block mx-2"></span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">T</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">h</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">r</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">o</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">u</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">g</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-blue-100">h</span>
+            <span className="inline-block mx-2"></span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-yellow-300">S</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-yellow-300">T</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-yellow-300">E</span>
+            <span className="inline-block hover:scale-105 transition-transform duration-300 hover:text-yellow-300">M</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-10 max-w-4xl mx-auto text-white/90 drop-shadow-md leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+
+          <p className={`transition-all duration-1000 delay-300 ease-out transform ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          } text-xl md:text-2xl mb-10 max-w-4xl mx-auto text-white/90 drop-shadow-md leading-relaxed`}>
             Our mission is to transform STEM education in Central Asia by providing innovative learning 
             opportunities and fostering a community of future scientists, technologists, engineers, and mathematicians.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+          <div className={`transition-all duration-1000 delay-600 ease-out transform ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          } flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8`}>
             <div className="flex items-center text-white/90">
               <div className="w-3 h-3 bg-yellow-300 rounded-full mr-3"></div>
               <span className="font-medium">Innovation Driven</span>
@@ -270,9 +303,9 @@ const Mission = () => {
 
       {/* Mission Statement Section */}
       <section className="py-20 bg-white relative overflow-hidden" ref={eyeRef}>
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-green-50 opacity-50"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#20a1d2]/10 to-[#3eb372]/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#3eb372]/10 to-[#20a1d2]/10 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-green-50 opacity-50" style={{ transform: 'translateZ(0)' }}></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#20a1d2]/10 to-[#3eb372]/10 rounded-full blur-3xl" style={{ transform: 'translateZ(0)' }}></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#3eb372]/10 to-[#20a1d2]/10 rounded-full blur-3xl" style={{ transform: 'translateZ(0)' }}></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
@@ -430,7 +463,7 @@ const Mission = () => {
       {/* Enhanced Call to Action */}
       <section className="relative py-20 bg-gradient-to-r from-[#20a1d2] via-[#3eb372] to-[#20a1d2] text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-0 left-0 w-full h-full" style={{ willChange: 'transform', transform: 'translateZ(0)' }}>
           <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float"></div>
           <div className="absolute bottom-10 right-10 w-40 h-40 bg-white/10 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-white/5 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
