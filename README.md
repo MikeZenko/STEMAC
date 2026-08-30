@@ -1,54 +1,21 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# STEM Central Asia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website for STEM Central Asia, a student-led organization that connects students in Kazakhstan, Kyrgyzstan, Tajikistan, Afghanistan, Turkmenistan, and Uzbekistan with STEM education and opportunities. The organization runs departments in Almaty, Astana, Dushanbe, Saint Petersburg, and San Diego.
 
-Currently, two official plugins are available:
+Live at [stemac.vercel.app](https://stemac.vercel.app).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack
 
-## Expanding the ESLint configuration
+React, TypeScript, Vite, Tailwind CSS, and shadcn/ui. Deployed on Vercel.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Development
 
-- Configure the top-level `parserOptions` property like this:
+The app lives in the `STEMAC/` directory:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+cd STEMAC
+pnpm install
+pnpm dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-=======
-# STEMAC
->>>>>>> 70e8b5f51b10705bb52903187bf35d74e62d5b6c
+`pnpm build` type-checks the project and writes a production build to `dist/`.

@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-
-Allow: /tair-narynov.html
-Allow: /tair-narynov-profile.html
-
-Sitemap: https://stemac.vercel.app/sitemap.xml
